@@ -49,13 +49,15 @@ Sugestão: Utilizar ferramentas como Pandas Proffile e Sweetviz , Seaborn e Matp
 
 ># Marco de Entrega 01: Itens do Sprint 01 <br>
     
-### 5.processos de Classificação  (explicação + datasets)<br>
+### 5.Estudo dos algoritmos previamente definidos para a pesquisa
+  (explicação/teoria)<br>
     A) Explicação sobre o algoritmo/método de classificação adotado
+    <br> (Incluindo por exemplo: como funciona, premissas, performance/complexidade para treino e para execução)
     B) Implementar método nos datasets utilizados
     
->#### 5.1 Processo de classificação na base de dados clássica:<br>
+>#### 5.1 Qual dos algoritmos estudados é o mais recomendado para a base de dados clássica:<br>
 >...
->#### 5.2 Processo de classificação na base de dados obtida:<br>
+>#### 5.2 Qual dos algoritmos estudados é o mais recomendado para a base de dados em estudo:<br>
 >...
 
 
