@@ -51,36 +51,37 @@ Sugestão: Utilizar ferramentas como Pandas Proffile e Sweetviz , Seaborn e Matp
     
 ### 5.Estudo dos algoritmos previamente definidos para a pesquisa
   (explicação/teoria)<br>
+  >#### 5.1 Visão geral sobre cada um dos algoritmos:<br>
     A) Explicação sobre o algoritmo/método de classificação adotado
-    <br> (Incluindo por exemplo: como funciona, premissas, performance/complexidade para treino e para execução)
+    <br> (Incluindo por exemplo: como funciona,<br> performance/complexidade para treino e para execução)
+    B) Estudar e apresentar exemplo de aplicações com algoritmos
+    C) Existem premissas necessárias para aplicação do algoritmo, quais são?
+    D) Aplicar os modelos estudados em bases de dados clássicas como Iris/Titanic (no caso de outra base consultar o professor)
     
->#### 5.1 Qual dos algoritmos estudados é o mais recomendado para a base de dados clássica (explicar):<br>
+>#### 5.2 Qual dos algoritmos estudados (não visão do grupo) é o mais recomendado para a base de dados clássica (explicar):<br>
 >...
->#### 5.2 Qual dos algoritmos estudados é o mais recomendado para a base de dados em estudo (explicar):<br>
+>#### 5.3 Qual dos algoritmos estudados (não visão do grupo) é o mais recomendado para a base de dados em estudo (explicar):<br>
 >...
 
 
 ># Marco de Entrega 02: Itens do Sprint 02 <br>
 >
 
-### 6.Implementar método nos datasets utilizados  (explicação + datasets)<br>
-    A) Explicação sobre o algoritmo/método de classificação adotado
+### 6.Implementar método no dataset em estudo  (explicação + datasets)<br>
+    A) Explicação sobre o processo de aplicação dos algotítmos em estudo no conjunto de dados em estudo (passos necessários/realizados)
     B) Implementar método nos datasets utilizados comparar resultados obtidos e validar ou descartar hipótese do ítem 5.1 e 5.2.
     
->#### 6.1 Processo de classificação na base de dados clássica:<br>
->...
->#### 6.2 Processo de classificação na base de dados em estudo:<br>
+>#### 6.1 Detalhamento dos processos de classificação com base nos algoritmos na base de dados em estudo:<br>
 >...
 >
 
-
 ### 7.Análise dos resultados obtidos <br>
     A) Detalhar conclusões com base nos resultados obtidos
-    B) Aplicar o processo de AutoML nos conjuntos de dados utilizados
+    B) Definir quais trabalhos futuros podem ser realizados a partir das conclusões obtidas e tarefas realizadas.
     
->#### 7.1 Processo de AutoML na base de dados clássica:<br>
+>#### 7.1 Conclusões com base nos resultados obtidos:<br>
 >...
->#### 7.2 Processo de AutoML na base de dados obtida:<br>
+>#### 7.2 Trabalhos futuros:<br>
 >...
 >
 ### 8. Resultados e Artefatos
