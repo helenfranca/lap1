@@ -53,14 +53,16 @@ Sugestão: Utilizar ferramentas como Pandas Proffile e Sweetviz , Seaborn e Matp
   (explicação/teoria)<br>
   >#### 5.1 Visão geral sobre cada um dos algoritmos:<br>
     A) Explicação sobre o algoritmo/método de classificação adotado
-    <br> (Incluindo por exemplo: como funciona,<br> performance/complexidade para treino e para execução)
+    (como funciona, performance/complexidade para treino e para execução, etc...)
     B) Estudar e apresentar exemplo de aplicações com algoritmos
-    C) Existem premissas necessárias para aplicação do algoritmo, quais são?
-    D) Aplicar os modelos estudados em bases de dados clássicas como Iris/Titanic (no caso de outra base consultar o professor)
+    C) Existem requisitos/premissas necessárias para aplicação do algoritmo, quais são?
+    D) Aplicar os modelos estudados em bases de dados clássicas como Iris/Titanic 
+    (no caso de desejar utilizar outra base consultar o professor)
     
->#### 5.2 Qual dos algoritmos estudados (não visão do grupo) é o mais recomendado para a base de dados clássica (explicar):<br>
+>#### 5.2 Qual dos algoritmos estudados (não visão do grupo, com base nos resultados obtidos) 
+>#### <br>é o mais recomendado para a base de dados clássica utilizada (explicar):<br>
 >...
->#### 5.3 Qual dos algoritmos estudados (não visão do grupo) é o mais recomendado para a base de dados em estudo (explicar):<br>
+>#### 5.3 Qual dos algoritmos estudados (não visão do grupo) provavelmente será o mais recomendado para a base de dados em estudo (explicar):<br>
 >...
 
 
