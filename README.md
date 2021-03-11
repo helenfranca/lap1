@@ -59,8 +59,7 @@ Sugestão: Utilizar ferramentas como Pandas Proffile e Sweetviz , Seaborn e Matp
     D) Aplicar os modelos estudados em bases de dados clássicas como Iris/Titanic 
     (no caso de desejar utilizar outra base consultar o professor)
     
->#### 5.2 Qual dos algoritmos estudados (não visão do grupo, com base nos resultados obtidos) 
->#### <br>é o mais recomendado para a base de dados clássica utilizada (explicar):<br>
+>#### 5.2 Qual dos algoritmos estudados (não visão do grupo, com base nos resultados obtidos) é o mais recomendado para a base de dados clássica utilizada (explicar):<br>
 >...
 >#### 5.3 Qual dos algoritmos estudados (não visão do grupo) provavelmente será o mais recomendado para a base de dados em estudo (explicar):<br>
 >...
@@ -70,8 +69,10 @@ Sugestão: Utilizar ferramentas como Pandas Proffile e Sweetviz , Seaborn e Matp
 >
 
 ### 6.Implementar método no dataset em estudo  (explicação + datasets)<br>
-    A) Explicação sobre o processo de aplicação dos algotítmos em estudo no conjunto de dados em estudo (passos necessários/realizados)
-    B) Implementar método nos datasets utilizados comparar resultados obtidos e validar ou descartar hipótese do ítem 5.1 e 5.2.
+    A) Explicação sobre o processo de aplicação dos algotítmos em estudo 
+    no conjunto de dados em estudo (passos necessários/realizados)
+    B) Implementar método nos datasets utilizados comparar resultados obtidos 
+    e validar ou descartar hipótese do ítem 5.1 e 5.2.
     
 >#### 6.1 Detalhamento dos processos de classificação com base nos algoritmos na base de dados em estudo:<br>
 >...
