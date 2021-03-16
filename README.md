@@ -9,7 +9,7 @@ Trabalho desenvolvido durante a disciplina:
 ### 1. Componentes <br>
 Integrantes do grupo<br>
 Helen França Medeiros:helenfranca93@gmail.com<br>
-Mayke Willans Christo Pereira:maykewillans@hotmail.com<br>
+Mayke Willans Christo Pereira: maykewillans@hotmail.com<br>
 Lia Casati:
 ...<br>
 
