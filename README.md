@@ -8,8 +8,9 @@ Trabalho desenvolvido durante a disciplina:
 
 ### 1. Componentes <br>
 Integrantes do grupo<br>
-primeiro_componente_do_grupo:email_primeiro_componente@dominio.com<br>
-segundo_componente_do_grupo:email_segundo_componente@dominio.com<br>
+Helen França Medeiros:helenfranca93@gmail.com<br>
+Mayke Willans Christo Pereira:maykewillans@hotmail.com<br>
+Lia Casati:
 ...<br>
 
 ### 2.Apresentação dos Datasets (Clássico + Em estudo)<br>
