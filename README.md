@@ -30,11 +30,9 @@ Lia Casati:
 * o que você deseja com este conjunto de dados?
 * quais são os tipos de atributos existentes e qual é o atributo alvo?
 
-A base contém diversos tipos de atributos: <br>*Categóricos > nominais* - Ex:
-<br>
-
+>A base contém diversos tipos de atributos: <br>*Categóricos > nominais* - Ex:
 Atributo alvo:<br>
->dsm_man : atributo de diagnóstico de mania 
+dsm_man : atributo de diagnóstico de mania 
 Tipo: Binário
 Ex: 1 - Sim; 5 - Não.
 
