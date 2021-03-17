@@ -8,7 +8,7 @@ Trabalho desenvolvido durante a disciplina:
 
 ### 1. Componentes <br>
 Integrantes do grupo<br>
-Helen França Medeiros:helenfranca93@gmail.com<br>
+Helen França Medeiros: helenfranca93@gmail.com<br>
 Mayke Willans Christo Pereira: maykewillans@hotmail.com<br>
 Lia Casati:
 ...<br>
@@ -17,11 +17,35 @@ Lia Casati:
 <br>Visão geral das bases de dados<br>
 
 > Após obter a(s) base(s) de dados Responda as seguintes perguntas sobre o conjunto de dados:
+
+##### Titanic 
 * seus dados são sobre o que? 
 * o que você deseja com este conjunto de dados?
-* quais são os tipos de atributos existentes e qual é o atributo alvo? 
+* quais são os tipos de atributos existentes e qual é o atributo alvo?
 * quais são os problemas existentes?
 * qualidade e clareza: garantir que a semântica dos atributos seja clara (nomes coerentes com os dados, se necessário renomear atributos).
+
+##### Mania
+* seus dados são sobre o que? 
+* o que você deseja com este conjunto de dados?
+* quais são os tipos de atributos existentes e qual é o atributo alvo?
+
+A base contém diversos tipos de atributos: <br>*Categóricos > nominais* - Ex:
+<br>
+
+Atributo alvo:<br>
+>dsm_man : atributo de diagnóstico de mania 
+Tipo: Binário
+Ex: 1 - Sim; 5 - Não.
+
+* quais são os problemas existentes?
+
+>Dados Nulos <br>
+Identificamos colunas com muitos campos nulos, acima de 99%. Visando a quantidade de dados na base acreditamos que não haverá um impacto negativo sobre o resultado, por isso, em consenso decidimos excluir os as colunas com mais de 75% de dados nulos. Ainda sim nos restou 121 atributos. Desses ainda existem atributos com cerca de 60% de dados faltantes, porém decidimos mantê-los para conhecer melhor a base e não correr o risco de talvez excluir alguma informação que seja importante no futuro.
+
+* qualidade e clareza: garantir que a semântica dos atributos seja clara (nomes coerentes com os dados, se necessário renomear atributos).
+
+>Para melhor entendimento do conteúdo da base tivemos de renomear todos os atributos.
 
 >#### 2.1 Visão geral da base de dados clássica:<br>
 >...
