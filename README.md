@@ -16,39 +16,47 @@ Lia Casati:
 ### 2.Apresentação dos Datasets (Clássico + Em estudo)<br>
 <br>Visão geral das bases de dados<br>
 
-> Após obter a(s) base(s) de dados Responda as seguintes perguntas sobre o conjunto de dados:
+>#### 2.1 Visão geral da base de dados clássica:<br>
 
 ##### Titanic 
-* seus dados são sobre o que? 
-* o que você deseja com este conjunto de dados?
-* quais são os tipos de atributos existentes e qual é o atributo alvo?
-* quais são os problemas existentes?
-* qualidade e clareza: garantir que a semântica dos atributos seja clara (nomes coerentes com os dados, se necessário renomear atributos).
+* Seus dados são sobre o que?
+<br>**Resp**: O dataset Titanic possui informações sobre os passageiros presentes na embarcação.
+* O que você deseja com este conjunto de dados?
+<br>**Resp**: O objetivo é fazer uma análise sobre quais variáveis tiveram maior influência na probabilidade de sobrevivência, ou seja, que tipo de pessoa teve mais chance de escapar com vida.
+* Quais são os tipos de atributos existentes e qual é o atributo alvo?
+<br>**Resp**: Atributo alvo é a coluna Survived
+
+| Atributo | Tipo | Significado |
+| :------------ |:--------------|:---------|
+| PassengerId  | Numérico discreto | Número de identificação do passageiro |
+| Survived     | Categórico binário | Informa se o passageiro sobreviveu ao desastre |
+| Pclass       | Categórico ordinal? | Classe do bilhete (1, 2 3) |
+| Name       | Categórico nominal | Nome do passageiro |
+| Sex       | Categórico nominal| Sexo do passageiro |
+| Age       | Numérico contínuo| Idade do passageiro |
+| SibSp       | Numérico discreto| Quantidade de cônjuges e irmãos a bordo |
+| Parch       | Numérico discreto| Quantidade de pais e filhos a bordo |
+| Ticket       | Categórico nominal| Número da passagem |
+| Fare       | Numérico contínuo| Preço da Passagem |
+| Cabin       | Categorico nominal| Número da cabine do passageiro |
+| Embarked       | Categórico nominal| Porto no qual o passageiro embarcou (C = Cherbourg, Q = Queenstown, S = Southampton) |
+
+* Quais são os problemas existentes?
+<br>**Resp**: valores ausentes
+* Qualidade e clareza: garantir que a semântica dos atributos seja clara (nomes coerentes com os dados, se necessário renomear atributos).
+
+>#### 2.2 Visão geral da base de dados em estudo:<br>
 
 ##### Mania
-* seus dados são sobre o que? 
-* o que você deseja com este conjunto de dados?
-* quais são os tipos de atributos existentes e qual é o atributo alvo?
-
->A base contém diversos tipos de atributos: <br>*Categóricos > nominais* - Ex:
-Atributo alvo:<br>
-dsm_man : atributo de diagnóstico de mania 
-Tipo: Binário
-Ex: 1 - Sim; 5 - Não.
-
-* quais são os problemas existentes?
-
->Dados Nulos <br>
-Identificamos colunas com muitos campos nulos, acima de 99%. Visando a quantidade de dados na base acreditamos que não haverá um impacto negativo sobre o resultado, por isso, em consenso decidimos excluir os as colunas com mais de 75% de dados nulos. Ainda sim nos restou 121 atributos. Desses ainda existem atributos com cerca de 60% de dados faltantes, porém decidimos mantê-los para conhecer melhor a base e não correr o risco de talvez excluir alguma informação que seja importante no futuro.
-
-* qualidade e clareza: garantir que a semântica dos atributos seja clara (nomes coerentes com os dados, se necessário renomear atributos).
-
->Para melhor entendimento do conteúdo da base tivemos de renomear todos os atributos.
-
->#### 2.1 Visão geral da base de dados clássica:<br>
->...
->#### 2.2 Visão geral da base de dados em estudo:<br>
->... 
+* Seus dados são sobre o que? 
+<br>**Resp**: O dataset Mania possui informações informações relevantes para a detecção do transtorno comum mania.
+* O que você deseja com este conjunto de dados?
+<br>**Resp**: O objetivo deste trabalho é fazer uma análise sobre quais variáveis têm maior influência na probabilidade de uma pessoa ter episódios de mania.
+* Quais são os tipos de atributos existentes e qual é o atributo alvo?
+<br>**Resp**: Atributos categóricos nominais (ex.: Tem problemas nas costas ou no pescoço? - 1(sim), 5(não), 8(não sabe) e 9(recusou)), atributos numéricos discretos (ex.: Qual a sua idade? - 18 anos) e atributos categóricos binários (ex.: Tem medo de insetos/animais? - 1(sim), 5(não)). **Atributo alvo: dsm_man**
+* Quais são os problemas existentes?
+<br>**Resp**: valores ausentes e valores inconsistentes
+* Qualidade e clareza: garantir que a semântica dos atributos seja clara (nomes coerentes com os dados, se necessário renomear atributos).
 
 ### 3.Pré-processamento dos Datasets <br>
 
@@ -57,6 +65,8 @@ Realize o Pré-processamento e Tratamento de Dados em sua base/dataset.
 >#### 3.1 Pré-processamento e tratamento na base de dados clássica:<br>
 >...
 >#### 3.2 Pré-processamento e tratamento na base de dados em estudo:<br>
+>Dados Nulos <br>
+Identificamos colunas com muitos campos nulos, acima de 99%. Visando a quantidade de dados na base acreditamos que não haverá um impacto negativo sobre o resultado, por isso, em consenso decidimos excluir os as colunas com mais de 75% de dados nulos. Ainda sim nos restou 121 atributos. Desses ainda existem atributos com cerca de 60% de dados faltantes, porém decidimos mantê-los para conhecer melhor a base e não correr o risco de talvez excluir alguma informação que seja importante no futuro.
 >...    
 
 ### 4.Análise Exploratória dos datasets<br>
