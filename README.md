@@ -10,7 +10,7 @@ Trabalho desenvolvido durante a disciplina:
 Integrantes do grupo<br>
 Helen França Medeiros: helenfranca93@gmail.com<br>
 Mayke Willans Christo Pereira: maykewillans@hotmail.com<br>
-Lia Casati:
+Lia Casati: liac.ramaldes@gmail.com
 ...<br>
 
 ### 2.Apresentação dos Datasets (Clássico + Em estudo)<br>
