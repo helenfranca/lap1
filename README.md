@@ -208,7 +208,7 @@ Identificamos colunas com muitos campos nulos, acima de 99%. Visando a quantidad
 A partir dos gráficos a seguir podemos inferir que:
 
 * O número de mortos passou o de sobreviventes
-* Morreram mais homens que mulheres
+* Morreram mais Mulheres que Homens
 * A classe em que mais morreram pessoas foi a 3ª (Mediante a essas informações, porém se fizéssemos um balanceamento pode ser que a quantidade significativa mude).
 
 ![plot1](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/plot1.PNG)
