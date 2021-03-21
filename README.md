@@ -24,7 +24,7 @@ Lia Casati: liac.ramaldes@gmail.com
 * O que você deseja com este conjunto de dados?
 <br>**Resp**: O objetivo é fazer uma análise sobre quais variáveis tiveram maior influência na probabilidade de sobrevivência, ou seja, que tipo de pessoa teve mais chance de escapar com vida.
 * Quais são os tipos de atributos existentes e qual é o atributo alvo?
-<br>**Resp**: Atributo alvo é a coluna Survived
+<br>**Resp**: Atributo alvo é a coluna **Survived**
 
 | Atributo | Tipo | Significado |
 | :------------ |:--------------|:---------|
@@ -42,8 +42,9 @@ Lia Casati: liac.ramaldes@gmail.com
 | Embarked       | Categórico nominal| Porto no qual o passageiro embarcou (C = Cherbourg, Q = Queenstown, S = Southampton) |
 
 * Quais são os problemas existentes?
-<br>**Resp**: valores ausentes
-* Qualidade e clareza: garantir que a semântica dos atributos seja clara (nomes coerentes com os dados, se necessário renomear atributos).
+<br>**Resp**: Incompletude(atributo ausente); Inconsistência(Fare)
+* Qualidade e clareza:
+<br>**Resp**: Não foi necessário renomear campos e colunas pois estava compreensível.
 
 >#### 2.2 Visão geral da base de dados em estudo:<br>
 
@@ -63,17 +64,171 @@ Lia Casati: liac.ramaldes@gmail.com
 Realize o Pré-processamento e Tratamento de Dados em sua base/dataset.
 
 >#### 3.1 Pré-processamento e tratamento na base de dados clássica:<br>
->...
+
+A imagem abaixo é um exemplo do conteúdo da base de dados Titanic e sua estatística
+![head](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/head.PNG)
+
+![describe1](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/describe1.PNG)
+
+Muitas colunas(Age, Cabin, Embarked) apresentavam dados nulos e tratamos das maneiras a seguir. A coluna Fare notamos uma incoerência analisando o describe, e decidimos investigar também.
+
+![nulos](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/nulos.PNG)
+
+**Age**
+
+Visando maior acerto na imputação dos dados, nos apoiamos na média de idade contando com duas variáveis: Sex e Title (coluna criada com o pronome de tratamento extraído do nome do passageiro. Para tal utilizados a função extrairTitulo())
+
+Decidimos usar a coluna Sex a partir do resultado da média de idades diferentes para o tratamento de DR. No caso do sexo Feminino a média é de 49 anos e no sexo Masculino a média é de 40 anos.
+
+![extrairTitulo](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/extrairTitulo.PNG)
+![media_idade_titulo](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/media_idade_titulo.PNG)
+
+Imputando os valores
+
+![input_idade_media_titulo](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/input_idade_media_titulo.PNG)
+
+**Cabin**
+Com cerca de 77% de nulos
+
+![cabin_null](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/cabin_null.PNG)
+
+Os dados da coluna Cabin são conjuntos de letras e números. Abaixo utilizamos a primeira letra do campo para classificar em cada Classe.
+
+![cabin_letra](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/cabin_letra.PNG)
+
+Separando as cabines por classe, temos:
+
+* Classe 1 - A, B, C, D, E, T
+* Classe 2 - D, E, F
+* Classe 3 - E, G, F
+
+Vamos de forma randômica imputar esses dados por cada classe.
+
+![input_cabin](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/input_cabin.PNG)
+
+Por fim, vamos aplicar a técnica One-Hot Encoding na coluna Cabin. Como são dados categóricos e em pouca quantidade fica livre da 'maldição de dimensionalidade'
+
+![onehot_cabin](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/onehot_cabin.PNG)
+
+Resultado:
+
+![cabin_hot](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/cabin_hot.PNG)
+
+Como só temos 1 registro na cabine T, vamos desconsiderá-la do dataset
+
+![exclusao_T](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/exclusao_T.PNG)
+
+**Sex**
+Substituindo
+
+* Female por 1
+* Male por 0
+
+![sex](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/sex.PNG)
+
+**Embarked**
+
+Aqui também vamos aplicar a técnica One-Hot Encoding pelo mesmo motivo anterior.
+
+![onehot_embarked](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/onehot_embarked.PNG)
+
+**Fare**
+
+Observando a coluna Fare pelo describe vimos que a média e mediana estão muito distantes. Possivelmente outliers, por isso decidimos investigar.
+
+![box1](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/box1.PNG)
+
+![box2](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/box2.PNG)
+
+Como pode-se observar, existem muitos outliers. Nas próximas linhas vamos tratar essa questão.
+
+* Contagem de pessoas que pagaram mais de 90 'dinheiros' de passagem
+
+* Contagem de pessoas por classe
+
+![classe_alto_valor](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/classe_alto_valor.PNG)
+
+* Observações:
+Tendo por base o gráfico tomamos o valor 90 como sendo o início dos outliers. Dessa maneira verificamos a quantidade de passageiros que haviam pago esse valor acima do normal e a qual classe pertenciam. Chegamos a conclusão que os passageiros que pagaram valores absurdos eram os da primeira classe, o que faz sentido já que essa é a classe mais cara na teoria - quanto melhor a classe, mais cara ela é. Porém esses pagaram valores muito diferentes dos outros.
+De 216 passageiros na primeira classe, 57 pagaram um valor acima da média esperada.
+
+* Abordagem utilizada:
+Iremos utilizar a média de preço da primeira classe (retirando outliers) para consertar esses valores e não interferir nos resultados, trazendo a normalidade.
+
+![preco_medio](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/preco_medio.PNG)
+
+![func_fare_outliers](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/func_fare_outliers.PNG)
+
+![fare_ok](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/fare_ok.PNG)
+
+![box3](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/box3.PNG)
+
+
+Desconfiamos que houvesse ainda uma distância entre os valores por conta dos passageiros que constam como passagem com valor zero, porém ao ver a quantidade percebemos que era bem baixa (15) se comparado com o número total de passageiros.
+
+
+**Alguns ajustes:**
+Apagando colunas com dados categóricos que não nos seriam úteis mais
+
+![drop_categoricos](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/drop_categoricos.PNG)
+
+**Versão final**
+
+![final](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/final.PNG)
+
+
 >#### 3.2 Pré-processamento e tratamento na base de dados em estudo:<br>
 >Dados Nulos <br>
 Identificamos colunas com muitos campos nulos, acima de 99%. Visando a quantidade de dados na base acreditamos que não haverá um impacto negativo sobre o resultado, por isso, em consenso decidimos excluir os as colunas com mais de 75% de dados nulos. Ainda sim nos restou 121 atributos. Desses ainda existem atributos com cerca de 60% de dados faltantes, porém decidimos mantê-los para conhecer melhor a base e não correr o risco de talvez excluir alguma informação que seja importante no futuro.
 >...    
 
 ### 4.Análise Exploratória dos datasets<br>
-Explore conjunto de dados por meio de uma ferramenta (EDA), destacando em suas observações o que for considerado mais relevante.
 
 >#### 4.1 Análise exploratória na base de dados clássica:<br>
->...
+
+A partir dos gráficos a seguir podemos inferir que:
+
+* O número de mortos passou o de sobreviventes
+* Morreram mais homens que mulheres
+* A classe em que mais morreram pessoas foi a 3ª (Mediante a essas informações, porém se fizéssemos um balanceamento pode ser que a quantidade significativa mude).
+
+![plot1](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/plot1.PNG)
+![plot2](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/plot2.PNG)
+![plot3](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/plot3.PNG)
+![plot4](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/plot4.PNG)
+
+Fizemos o uso do **Pandas Profiling**
+
+![pandas1](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/pandas1.PNG)
+
+O Pandas Profiling acusou cerca de 11.9% dos dados como duplicados. Retiramos e a nova e última versão do dataset é de 785 registros.
+
+![warning](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/warning.PNG)
+
+Além disso também acusou correlações entre algumas variáveis, porém não investigamos a fundo.
+
+**PLUS**
+
+![predicao](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/predicao.PNG)
+
+Aplicamos o teste de predição e taxa foi de 79.42% de acurácia nos dados de treinamento e usando a parte não treinada foi de 72.58%.
+
+Porém ao realizarmos o mesmo procedimento com a base sem retirar os duplicados, o resultado teve uma leve melhora na acurácia principalmente utilizando a faixa não treinada.
+
+Resultados:
+
+* Sem duplicados:
+
+  * Treino: 79.42%
+  * Sem Treino: 72.58%
+
+* Com duplicados:
+
+  * Treino: 79.64%
+  * Sem treino: 79.82%
+
+
+
 >#### 4.2 Análise exploratória na base de dados em estudo:<br>
 >...    
 Sugestão: Utilizar ferramentas como Pandas Proffile e Sweetviz , Seaborn e Matplotlib <br>
