@@ -90,6 +90,8 @@ Imputando os valores
 
 ![input_idade_media_titulo](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/input_idade_media_titulo.PNG)
 
+___
+
 **Cabin**
 
 Com cerca de 77% de nulos
@@ -122,6 +124,9 @@ Como só temos 1 registro na cabine T, vamos desconsiderá-la do dataset
 
 ![exclusao_T](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/exclusao_T.PNG)
 
+
+___
+
 **Sex**
 
 Substituindo
@@ -131,11 +136,16 @@ Substituindo
 
 ![sex](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/sex.PNG)
 
+
+___
+
 **Embarked**
 
 Aqui também vamos aplicar a técnica One-Hot Encoding pelo mesmo motivo anterior.
 
 ![onehot_embarked](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/onehot_embarked.PNG)
+
+___
 
 **Fare**
 
@@ -171,12 +181,15 @@ Iremos utilizar a média de preço da primeira classe (retirando outliers) para 
 
 Desconfiamos que houvesse ainda uma distância entre os valores por conta dos passageiros que constam como passagem com valor zero, porém ao ver a quantidade percebemos que era bem baixa (15) se comparado com o número total de passageiros.
 
+___
 
 **Alguns ajustes:**
 
 Apagando colunas com dados categóricos que não nos seriam úteis mais
 
 ![drop_categorico](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/drop_categorico.PNG)
+
+___
 
 **Versão final**
 
@@ -212,6 +225,8 @@ O Pandas Profiling acusou cerca de 11.9% dos dados como duplicados. Retiramos e 
 ![warning](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/warning.PNG)
 
 Além disso também acusou correlações entre algumas variáveis, porém não investigamos a fundo.
+
+___
 
 **PLUS**
 
