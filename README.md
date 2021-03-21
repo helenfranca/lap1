@@ -81,7 +81,7 @@ Visando maior acerto na imputação dos dados, nos apoiamos na média de idade c
 Decidimos usar a coluna Sex a partir do resultado da média de idades diferentes para o tratamento de DR. No caso do sexo Feminino a média é de 49 anos e no sexo Masculino a média é de 40 anos.
 
 ![extrairTitulo](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/extrairTitulo.PNG)
-![media_idade_titulo](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/media_idade_titulo.PNG)
+![média_idade_titulo](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/media_idade_titulo.PNG)
 
 Imputando os valores
 
@@ -119,6 +119,7 @@ Como só temos 1 registro na cabine T, vamos desconsiderá-la do dataset
 ![exclusao_T](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/exclusao_T.PNG)
 
 **Sex**
+
 Substituindo
 
 * Female por 1
@@ -170,7 +171,7 @@ Desconfiamos que houvesse ainda uma distância entre os valores por conta dos pa
 **Alguns ajustes:**
 Apagando colunas com dados categóricos que não nos seriam úteis mais
 
-![drop_categoricos](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/drop_categoricos.PNG)
+![drop_categorico](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/drop_categoricos.PNG)
 
 **Versão final**
 
