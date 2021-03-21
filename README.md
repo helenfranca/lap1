@@ -74,6 +74,9 @@ Muitas colunas(Age, Cabin, Embarked) apresentavam dados nulos e tratamos das man
 
 ![nulos](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/nulos.PNG)
 
+
+
+___
 **Age**
 
 Visando maior acerto na imputação dos dados, nos apoiamos na média de idade contando com duas variáveis: Sex e Title (coluna criada com o pronome de tratamento extraído do nome do passageiro. Para tal utilizados a função extrairTitulo())
@@ -88,6 +91,7 @@ Imputando os valores
 ![input_idade_media_titulo](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/input_idade_media_titulo.PNG)
 
 **Cabin**
+
 Com cerca de 77% de nulos
 
 ![cabin_null](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/cabin_null.PNG)
@@ -169,6 +173,7 @@ Desconfiamos que houvesse ainda uma distância entre os valores por conta dos pa
 
 
 **Alguns ajustes:**
+
 Apagando colunas com dados categóricos que não nos seriam úteis mais
 
 ![drop_categorico](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/drop_categorico.PNG)
