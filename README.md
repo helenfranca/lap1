@@ -81,7 +81,7 @@ Visando maior acerto na imputação dos dados, nos apoiamos na média de idade c
 Decidimos usar a coluna Sex a partir do resultado da média de idades diferentes para o tratamento de DR. No caso do sexo Feminino a média é de 49 anos e no sexo Masculino a média é de 40 anos.
 
 ![extrairTitulo](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/extrairTitulo.PNG)
-![média_idade_titulo](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/média_idade_titulo.PNG)
+![média_idade_title](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/média_idade_title.PNG)
 
 Imputando os valores
 
