@@ -344,13 +344,44 @@ Por fim, analisando os dados coletados até aqui, uma possível análise para re
 ### 5.Estudo dos algoritmos previamente definidos para a pesquisa
   (explicação/teoria)<br>
   >#### 5.1 Visão geral sobre cada um dos algoritmos:<br>
-    A) Explicação sobre o algoritmo/método de classificação adotado
-    (como funciona, performance/complexidade para treino e para execução, etc...)
-    B) Estudar e apresentar exemplo de aplicações com algoritmos
-    C) Existem requisitos/premissas necessárias para aplicação do algoritmo, quais são?
-    D) Aplicar os modelos estudados em bases de dados clássicas como Iris/Titanic 
-    (no caso de desejar utilizar outra base consultar o professor)
-    
+
+  **CatboostClassifier**
+
+A) Explicação sobre o algoritmo/método de classificação adotado (como funciona, performance/complexidade para treino e para execução, etc...)
+
+É uma técnica de Machine Learning focado em melhoria na velocidade computacional baseado no Gradient Boost. Utilizado para classificação, seu funcionamento se assemelha a técnica em que se baseia, porém o que a diferencia é a maneira em que trata os dados categóricos onde implementa árvores simétricas utilizando One-hot-encoding. Para bases muito grandes, esta técnica permite o uso da GPU. O CatboostClassifier é de fácil configuração para treino e tende a oferecer ótimos resultados mesmo com hiperparâmetros padrões.
+
+Esse procedimento é muito propenso ao overfitting, porque é realizando utilizando resíduos de cada ponto de um modelo que já foi treinado no mesmo conjunto de pontos. O CatboostClassifier treina o modelo usando os resíduos(erros) de cada ponto de dados como valores de classe, realizando o monitoramento de erros/perda. Neste cálculo usa o modelo que foi treinado em todos os outros pontos anteriores a ele. Por exemplo, para calcular o resíduo do ponto x5, treina um modelo usando os pontos x1, x2, x3 e x4. Portanto treina diferentes modelos para pontos diferentes. No final, é calculado os resíduos para os pontos onde o modelo correspondente nunca foi treinado.
+
+Segundo a documentação ele tende a ser até 8x mais rápido que outros algoritmos de mesma finalidade, como o XGboost durante a previsão. Porém se os dados, em sua maioria, forem numéricos tende a ser mais demorado que o LightGBM, outro algoritmo de Machine Learning.
+
+<br>
+
+B) Estudar e apresentar exemplo de aplicações com algoritmos:
+
+Este algoritmo costuma ser aplicado em desafios de negócio, como detecção de fraude; Recomendação; Previsões;
+
+<br>
+
+C) Existem requisitos/premissas necessárias para aplicação do algoritmo, quais são?
+
+Este algoritmo não exige muito esforço no pré-processamento dos dados se comparados com outros tipos de algoritmos, já que aceita dados categóricos.
+
+Para que não hajam erros na criação do modelo, é interessante informar as colunas queu são categóricas. 
+
+D) Aplicar os modelos estudados em bases de dados clássicas como Iris/Titanic (no caso de desejar utilizar outra base consultar o professor)
+
+![acuraria](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_results/acuracia.PNG)
+
+<br>
+
+![comparacao](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_results/comparacao_algoritmos.PNG)
+
+<br>
+
+![matrizdeconfusao](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_results/matriz_de_confusao.PNG)
+
+
 >#### 5.2 Qual dos algoritmos estudados (não visão do grupo, com base nos resultados obtidos) é o mais recomendado para a base de dados clássica utilizada (explicar):<br>
 >...
 >#### 5.3 Qual dos algoritmos estudados (não visão do grupo) provavelmente será o mais recomendado para a base de dados em estudo (explicar):<br>
@@ -361,7 +392,7 @@ Por fim, analisando os dados coletados até aqui, uma possível análise para re
 >
 
 ### 6.Implementar método no dataset em estudo  (explicação + datasets)<br>
-    A) Explicação sobre o processo de aplicação dos algotítmos em estudo 
+    A) Explicação sobre o processo de aplicação dos algoritmos em estudo 
     no conjunto de dados em estudo (passos necessários/realizados)
     B) Implementar método nos datasets utilizados comparar resultados obtidos 
     e validar ou descartar hipótese do ítem 5.1 e 5.2.
