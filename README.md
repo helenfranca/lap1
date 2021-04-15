@@ -382,11 +382,14 @@ D) Aplicar os modelos estudados em bases de dados clássicas como Iris/Titanic (
 ![matrizdeconfusao](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_results/matriz_de_confusao.PNG)
 
 
->#### 5.2 Qual dos algoritmos estudados (não visão do grupo, com base nos resultados obtidos) é o mais recomendado para a base de dados clássica utilizada (explicar):<br>
->...
->#### 5.3 Qual dos algoritmos estudados (não visão do grupo) provavelmente será o mais recomendado para a base de dados em estudo (explicar):<br>
->...
+>#### 5.2 Qual dos algoritmos estudados (na visão do grupo, com base nos resultados obtidos) é o mais recomendado para a base de dados clássica utilizada (explicar):<br>
 
+![besttitanic](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_results/best_titanic.PNG)
+
+
+>#### 5.3 Qual dos algoritmos estudados (na visão do grupo) provavelmente será o mais recomendado para a base de dados em estudo (explicar):<br>
+
+![bestmania](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_results/best_mania.PNG)
 
 ># Marco de Entrega 02: Itens do Sprint 02 <br>
 >
