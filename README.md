@@ -352,7 +352,8 @@ Para compreendermos melhor o funcionamento cada um dos algoritmos, vamos conhece
 Os métodos **Boosting** formam uma categoria de Ensemble Learning, tendo como base treinar vários modelos mais simples com a finalidade de produzir um modelo final mais robusto. Para maximizar o desempenho do preditor final, o Boosting treina iterativamente novos modelos com um enfoque nas observações que os modelos anteriores erraram mais, tornando a predição mais resistente ao viés. Em seguida, atualiza-se o modelo para priorizar as predições com maior erro nas observações da base de teste. O modo como ocorre esse treinamento e essa atualização é onde diferem os diferentes algoritmos de Boosting.
 <br>
 #### 5.1 Visão geral sobre cada um dos algoritmos:<br>
-   **Gradient Boost**
+   
+### **Gradient Boost**
 
 **A) Explicação sobre o algoritmo/método de classificação adotado (como funciona, performance/complexidade para treino e para execução, etc...)**
 
