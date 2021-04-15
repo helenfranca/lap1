@@ -351,6 +351,12 @@ Por fim, analisando os dados coletados até aqui, uma possível análise para re
     C) Existem requisitos/premissas necessárias para aplicação do algoritmo, quais são?
     D) Aplicar os modelos estudados em bases de dados clássicas como Iris/Titanic 
     (no caso de desejar utilizar outra base consultar o professor)
+    >####Gradiente Boost
+    A) Gradiente Boost é um algoritimo que tem como finalidade prever valores continuos. Ele é baseado em árvores de decisão e trabalha de forma a melhorar as previsões futuras com base nos erros das anteriores. Funciona calculando residuos, sendo estes o dado previsto menos o dado original, conforme a diferença entre os residuos diminui ele chega mais próximo ao resultado, as previsões são feitas seguindo a seguinte formula "previsão2 = previsão1 + (nota x residual)", sendo a nota um valor entre 0 e 1 responsável por minimizar o overfit. Tem uma complexidade grande devido seus calculos e uma performace que deve ser analisada com cuidado pois esse algoritmo pode gerar overfit.
+    B) É um algoritimo que pode ser usado tanto para classificação como para regressão.
+    C) Não aceita valores categoricos e precisa de um algoritmo que tenha erros, uma vez que sua predição é baseada nos erros.
+    D)
+    
     
 >#### 5.2 Qual dos algoritmos estudados (não visão do grupo, com base nos resultados obtidos) é o mais recomendado para a base de dados clássica utilizada (explicar):<br>
 >...
