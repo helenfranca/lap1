@@ -343,9 +343,9 @@ Por fim, analisando os dados coletados até aqui, uma possível análise para re
     
 ### 5.Estudo dos algoritmos previamente definidos para a pesquisa
   (explicação/teoria)<br>
-  >#### 5.1 Visão geral sobre cada um dos algoritmos:<br>
+#### 5.1 Visão geral sobre cada um dos algoritmos:<br>
 
-  **CatboostClassifier**
+**CatboostClassifier**
 
 A) Explicação sobre o algoritmo/método de classificação adotado (como funciona, performance/complexidade para treino e para execução, etc...)
 
@@ -371,25 +371,25 @@ Para que não hajam erros na criação do modelo, é interessante informar as co
 
 D) Aplicar os modelos estudados em bases de dados clássicas como Iris/Titanic (no caso de desejar utilizar outra base consultar o professor)
 
-![acuraria](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_results/acuracia.PNG)
+![acuraria](https://github.com/helenfranca/lap1/blob/helen/img_results/acuracia.PNG?raw=true)
 
 <br>
 
-![comparacao](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_results/comparacao_algoritmos.PNG)
+![comparacao](https://github.com/helenfranca/lap1/blob/helen/img_results/comparacao_algoritmos.PNG?raw=true)
 
 <br>
 
-![matrizdeconfusao](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_results/matriz_de_confusao.PNG)
+![matrizdeconfusao](https://github.com/helenfranca/lap1/blob/helen/img_results/matriz_de_confusao.PNG?raw=true)
 
 
 >#### 5.2 Qual dos algoritmos estudados (na visão do grupo, com base nos resultados obtidos) é o mais recomendado para a base de dados clássica utilizada (explicar):<br>
 
-![besttitanic](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_results/best_titanic.PNG)
+![besttitanic](https://github.com/helenfranca/lap1/blob/helen/img_results/best_titanic.PNG?raw=true)
 
 
->#### 5.3 Qual dos algoritmos estudados (na visão do grupo) provavelmente será o mais recomendado para a base de dados em estudo (explicar):<br>
+#### 5.3 Qual dos algoritmos estudados (na visão do grupo) provavelmente será o mais recomendado para a base de dados em estudo (explicar):<br>
 
-![bestmania](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_results/best_mania.PNG)
+![bestmania](https://github.com/helenfranca/lap1/blob/helen/img_results/best_mania.PNG?raw=true)
 
 ># Marco de Entrega 02: Itens do Sprint 02 <br>
 >
