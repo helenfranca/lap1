@@ -214,6 +214,7 @@ ___
 
 
 >#### 3.2 Pré-processamento e tratamento na base de dados em estudo:<br>
+
 **Verificando valores nulos:**
 
 ![dataset_mania_nulos](./imagens/dataset_mania_nulos.png)
@@ -265,6 +266,22 @@ Visualizando CC:
 
 ![dataset_mania_CC](./imagens/dataset_mania_CC.png)
  
+**Excluindo Informações sem significado**
+Analisando cada atributo, podemos perceber que existem atributos de informações do entrevistador. Para a nossa análise, esses dados não possuem significado relevante. E por isso serão excluidos : CC11,CC21,CC23,CC25,CC27,CC29,CC7,CC8,M1A,M21A,M26,M28,M29_1,M54,M55,M8,SC1_1 e SC28.
+
+**Excluindo atributos sem registros**
+Pelo domínio das respostas que geramos anteriormente, podemos perceber que há colunas retornaram resultados. Logo, são colunas vazias e que podem ser excluídas. São elas CC2A04,CC2A05,CC2A06,CC2A07,CC2A08,CC2A09,CC2A10,CC2A11 e CC2A12.
+
+**Tratando atributos de tempo**
+No dataset, existem colunas que se complementam, mas são interpretadas de forma diferente.
+
+Exemplo:
+M6B1 - Duração do episódio sendo muito irritável que se destaca
+M6B2 - Unidade de tempo
+Assim, poderíamos ter: 2 dias, 2 meses, 2 anos, etc.
+
+Vamos tratar esses valores transformando todos os registro para uma única unidade de tempo. Escolhemos a unidade de tempo "hora" para a padronização.
+
 
 ### 4.Análise Exploratória dos datasets<br>
 
