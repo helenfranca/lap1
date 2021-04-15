@@ -278,13 +278,13 @@ Visualizando CC:
 
 ![dataset_mania_CC](./imagens/dataset_mania_CC.png)
  
-**Excluindo Informações sem significado**
+**Excluindo Informações sem significado**<br>
 Analisando cada atributo, podemos perceber que existem atributos de informações do entrevistador. Para a nossa análise, esses dados não possuem significado relevante. E por isso serão excluidos : CC11,CC21,CC23,CC25,CC27,CC29,CC7,CC8,M1A,M21A,M26,M28,M29_1,M54,M55,M8,SC1_1 e SC28.
 
-**Excluindo atributos sem registros**
+**Excluindo atributos sem registros**<br>
 Pelo domínio das respostas que geramos anteriormente, podemos perceber que há colunas retornaram resultados. Logo, são colunas vazias e que podem ser excluídas. São elas CC2A04,CC2A05,CC2A06,CC2A07,CC2A08,CC2A09,CC2A10,CC2A11 e CC2A12.
 
-**Tratando atributos de tempo**
+**Tratando atributos de tempo**<br>
 No dataset, existem colunas que se complementam, mas são interpretadas de forma diferente.
 
 Exemplo:
