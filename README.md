@@ -212,6 +212,7 @@ ___
 
 ![final](https://github.com/helenfranca/lap1/blob/8b34ff5205ff229f7d2f4caec57709f0c4a37d0a/img_titanic/final.PNG)
 
+______
 
 >#### 3.2 Pré-processamento e tratamento na base de dados em estudo:<br>
 **Verificando valores nulos:**
