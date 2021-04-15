@@ -438,19 +438,21 @@ Observando as opções restantes, o XGBoost teve um desempenho melhor que o Grad
 
 ![bestmania](https://github.com/helenfranca/lap1/blob/helen/img_results/best_mania.PNG?raw=true)
 
+
+># Marco de Entrega 02: Itens do Sprint 02 <br>
+>
+
+### 6.Implementar método no dataset em estudo  (explicação + datasets)<br>
+    A) Explicação sobre o processo de aplicação dos algoritmos em estudo 
+    no conjunto de dados em estudo (passos necessários/realizados)
+    B) Implementar método nos datasets utilizados comparar resultados obtidos 
+    e validar ou descartar hipótese do ítem 5.1 e 5.2.
+
 ![comparacao](https://github.com/helenfranca/lap1/blob/helen/img_results/comparacao_algoritmos.PNG?raw=true)
 
 <br>
 
 ![acuraria](https://github.com/helenfranca/lap1/blob/helen/img_results/acuracia.PNG?raw=true)
-># Marco de Entrega 02: Itens do Sprint 02 <br>
->
-
-### 6.Implementar método no dataset em estudo  (explicação + datasets)<br>
-    A) Explicação sobre o processo de aplicação dos algotítmos em estudo 
-    no conjunto de dados em estudo (passos necessários/realizados)
-    B) Implementar método nos datasets utilizados comparar resultados obtidos 
-    e validar ou descartar hipótese do ítem 5.1 e 5.2.
     
 >#### 6.1 Detalhamento dos processos de classificação com base nos algoritmos na base de dados em estudo:<br>
 >...
@@ -474,7 +476,8 @@ Outro ponto muito importante e que teve um grande impacto nos testes do Mania, f
 ### 8. Resultados e Artefatos
 >#### 8.1 Slides Finais
 
-
+[Sprint 2](https://docs.google.com/presentation/d/1DifUAMpFXQ_FjF15LCpWkrTEek7UTZRF24Elvk4qNgY/edit#slide=id.p)
+[Sprint 3](https://docs.google.com/presentation/d/1MEKfM3S0nKfEmoJaIr2Ga4yqnNoZk5dh-johtPsP8eU/edit)
 
 >#### 8.3 Demais artefatos solicitados pelo professor
 
