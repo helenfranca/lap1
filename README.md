@@ -185,11 +185,50 @@ Por fim, analisando os dados coletados até aqui, uma possível análise para re
     C) Existem requisitos/premissas necessárias para aplicação do algoritmo, quais são?
     D) Aplicar os modelos estudados em bases de dados clássicas como Iris/Titanic 
     (no caso de desejar utilizar outra base consultar o professor)
-    
+
+
+Os algoritmos definidos para a pesquisa foram: Gradient Boost Classifier, Extreme Gradient Boosting e CatBoost Classifier.
+
+Para compreendermos melhor o funcionamento cada um dos algoritmos, vamos conhecer alguns conceitos:
+
+**Ensemble Learning (aprendizagem em conjunto)** são métodos que visam formar um novo modelo combinado outros existentes. Esse agrupamento busca associar os algoritmos de forma a minimizar suas desvantagens individuais no modelo final.
+
+Os métodos **Boosting** formam uma categoria de Ensemble Learning, tendo como base treinar vários modelos mais simples com a finalidade de produzir um modelo final mais robusto. Para maximizar o desempenho do preditor final, o Boosting treina iterativamente novos modelos com um enfoque nas observações que os modelos anteriores erraram mais, tornando a predição mais resistente ao viés. Em seguida, atualiza-se o modelo para priorizar as predições com maior erro nas observações da base de teste. O modo como ocorre esse treinamento e essa atualização é onde diferem os diferentes algoritmos de Boosting.
+
+### **Extreme Gradient Boosting**
+**A) Sobre o algoritmo/método de classificação adotado**
+<br>Extreme Gradient Boosting ou XGBoost, é um algoritmo de aprendizado de máquina, baseado na estrutura do Gradient Boosting. Como podemos perceber pelo nome, o XGBoost é um Gradient Boosting melhorado, combina técnicas de otimização de software e hardware para produzir resultados superiores usando menos recursos de computação no menor período de tempo.
+
+Funcionamento:
+1. O algoritmo faz uma predição inicial;
+2. Assim como o Gradient Boosting, o XGBoost treina uma árvore de decisão verificando os resíduos.
+    <br>2.1 Cada árvore começa com uma única folha, e todos os resíduos vão para essa folha;
+    <br>2.2 Calculamos um score de qualidade, ou score de similaridade, para os resíduos;
+    <br>2.3 Tentamos agrupar resíduos similares dividindo em dois grupos criando duas folhas;
+    <br>2.4 Agora calculamos os scores de similaridade para as duas folhas;
+    <br>2.5 Precisamos então quantificar o quão melhor é termos essa divisão de folhas comparadas a quando todas estavam na raíz. Fazemos isso calculando o ganho.
+3. Esse procedimento é refeito e agrupamos as divisões com melhores ganhos;
+4. Calculamos o output para cada folha
+5. Temos uma árvore completa. Assim, o XGBoost faz novas predições com a predição inicial mais o output da árvore vezes uma learning rate (taxa de aprendizado).
+
+**B) Estudar e apresentar exemplo de aplicações com algoritmos**
+<br>
+
+**C) Existem requisitos/premissas necessárias para aplicação do algoritmo, quais são?**
+<br> O algoritmo não trabalha com dados categóricos
+
+**D) Aplicar os modelos estudados em bases de dados clássicas como Iris/Titanic**
+<br>
+
+
 >#### 5.2 Qual dos algoritmos estudados (não visão do grupo, com base nos resultados obtidos) é o mais recomendado para a base de dados clássica utilizada (explicar):<br>
->...
+
+Com base nos resultados, o algoritmo com melhor desempenho foi o XGBoost.
+
 >#### 5.3 Qual dos algoritmos estudados (não visão do grupo) provavelmente será o mais recomendado para a base de dados em estudo (explicar):<br>
->...
+
+O Catboost tem melhor desempenho com dados categóricos, como o dataset Mania possui apenas valores numéricos, não seria recomendado utilizá-lo.
+Observando as opções restantes, o XGBoost teve um desempenho melhor que o Gradiente Boosting nos testes realizados. Assim, o XGBoost é o mais recomendado para utilização no dataset Mania.
 
 
 ># Marco de Entrega 02: Itens do Sprint 02 <br>
@@ -210,7 +249,16 @@ Por fim, analisando os dados coletados até aqui, uma possível análise para re
     B) Definir quais trabalhos futuros podem ser realizados a partir das conclusões obtidas e tarefas realizadas.
     
 >#### 7.1 Conclusões com base nos resultados obtidos:<br>
->...
+
+Podemos perceber que cada etapa do Machine Learning, desde a preparação dos dados até a avaliação dos resultados da predição, é um processo de aprendizado onde deve-se ponderar cada decisão tomada, observar os impactos e procurar melhorar com base nos resultados obtidos.
+
+
+Como o dataset Titanic é uma base clássica e com um domínio conhecido, foi mais simples interpretar os atributos, permitindo a realização de testes e análises mais objetivas.
+
+
+Já no dataset Mania, os dados possuíam pouco ou nenhum significado, tornando o processo mais trabalhoso. Assim, o pré-processamento dos dados, além de preparar os dados, também serviu para o entendimento da base. 
+Outro ponto muito importante e que teve um grande impacto nos testes do Mania, foi o grande desbalanceamento do atributo alvo. Esse desbalanceamento é análogo ao processo de Machine Learning em fraudes bancárias, onde temos grande discrepância nos casos, sendo os casos de fraude uma porcentagem mínima. Com isso, para obtermos um resultado mais assertivo, seria mais adequado mudar a ênfase do nosso questionamento inicial: o resultado da análise no dataset Mania não deve prever se pessoa pode ter epsódios de mania ou não, deve prever se, dentre as características apresentadas, uma pessoa apresenta um comportamento diferente do comum e pode ser classificada como um caso suspeito, devendo ser observada com mais cuidado.
+
 >#### 7.2 Trabalhos futuros:<br>
 >...
 >
