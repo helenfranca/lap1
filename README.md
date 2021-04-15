@@ -460,13 +460,22 @@ Observando as opções restantes, o XGBoost teve um desempenho melhor que o Grad
     A) Detalhar conclusões com base nos resultados obtidos
     B) Definir quais trabalhos futuros podem ser realizados a partir das conclusões obtidas e tarefas realizadas.
     
->#### 7.1 Conclusões com base nos resultados obtidos:<br>
->...
+#### 7.1 Conclusões com base nos resultados obtidos:<br>
+Podemos perceber que cada etapa do Machine Learning, desde a preparação dos dados até a avaliação dos resultados da predição, é um processo de aprendizado onde deve-se ponderar cada decisão tomada, observar os impactos e procurar melhorar com base nos resultados obtidos.
+
+Como o dataset Titanic é uma base clássica e com um domínio conhecido, foi mais simples interpretar os atributos, permitindo a realização de testes e análises mais objetivas.
+
+Já no dataset Mania, os dados possuíam pouco ou nenhum significado, tornando o processo mais trabalhoso. Assim, o pré-processamento dos dados, além de preparar os dados, também serviu para o entendimento da base. 
+Outro ponto muito importante e que teve um grande impacto nos testes do Mania, foi o grande desbalanceamento do atributo alvo. Esse desbalanceamento é análogo ao processo de Machine Learning em fraudes bancárias, onde temos grande discrepância nos casos, sendo os casos de fraude uma porcentagem mínima. Com isso, para obtermos um resultado mais assertivo, seria mais adequado mudar a ênfase do nosso questionamento inicial: o resultado da análise no dataset Mania não deve prever se pessoa pode ter epsódios de mania ou não, deve prever se, dentre as características apresentadas, uma pessoa apresenta um comportamento diferente do comum e pode ser classificada como um caso suspeito, devendo ser observada com mais cuidado.
+
 >#### 7.2 Trabalhos futuros:<br>
 >...
 >
 ### 8. Resultados e Artefatos
 >#### 8.1 Slides Finais
+
+
+
 >#### 8.3 Demais artefatos solicitados pelo professor
 
 
