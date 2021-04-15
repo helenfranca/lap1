@@ -11,7 +11,7 @@ Integrantes do grupo<br>
 Helen França Medeiros: helenfranca93@gmail.com<br>
 Mayke Willans Christo Pereira: maykewillans@hotmail.com<br>
 Lia Casati: liac.ramaldes@gmail.com
-...<br>
+<br>
 
 ### 2.Apresentação dos Datasets (Clássico + Em estudo)<br>
 <br>Visão geral das bases de dados<br>
