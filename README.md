@@ -1,30 +1,40 @@
 # lap1
 # DISCIPLINA: Laboratório de Pesquisa 1 - lap1
 
-# TRABALHO 01:  Título do Trabalho
-Trabalho desenvolvido durante a disciplina:
+# TRABALHO 01:  Machine Learning
 
 # Sumário
 
-### 1. Componentes <br>
+## 1. Componentes <br>
 Integrantes do grupo<br>
 Helen França Medeiros: helenfranca93@gmail.com<br>
 Mayke Willans Christo Pereira: maykewillans@hotmail.com<br>
 Lia Casati: liac.ramaldes@gmail.com
 <br>
 
-### 2.Apresentação dos Datasets (Clássico + Em estudo)<br>
-<br>Visão geral das bases de dados<br>
+## 2. Apresentação dos Datasets (Clássico + Em estudo)
+    Visão geral das bases de dados:
+        a) seus dados são sobre o que?
+        b) o que você deseja com este conjunto de dados?
+        c) quais são os tipos de atributos existentes e qual é o atributo alvo?
+        d) quais são os problemas existentes?
+        e) qualidade e clareza: garantir que a semântica dos atributos seja clara (nomes coerentes com os dados, se necessário renomear atributos).
 
 >#### 2.1 Visão geral da base de dados clássica:<br>
 
-##### Titanic 
-* Seus dados são sobre o que?
-<br>**Resp**: O dataset Titanic possui informações sobre os passageiros presentes na embarcação.
-* O que você deseja com este conjunto de dados?
-<br>**Resp**: O objetivo é fazer uma análise sobre quais variáveis tiveram maior influência na probabilidade de sobrevivência, ou seja, que tipo de pessoa teve mais chance de escapar com vida.
-* Quais são os tipos de atributos existentes e qual é o atributo alvo?
-<br>**Resp**: Atributo alvo é a coluna **Survived**
+### **Dataset Titanic**
+**Seus dados são sobre o que?**
+<br>
+O naufrágio do Titanic é um dos mais famosos da história. Em 15 de abril de 1912, durante sua viagem inaugural, o Titanic afundou após colidir com um iceberg. 
+Infelizmente, não havia botes salva-vidas suficientes para todos a bordo, resultando na morte de 1.502 dos 2.224 passageiros e tripulantes. Embora houvesse algum elemento de sorte envolvido na sobrevivência, parece que alguns grupos de pessoas tinham mais probabilidade de sobreviver do que outros.
+
+O dataset Titanic possui informações sobre os passageiros presentes na embarcação.
+
+**O que você deseja com este conjunto de dados?**
+<br>O objetivo é deste trabalho é prever se, dado determinadas características uma pessoa, a mesma sobreviveria ou não.
+
+**Quais são os tipos de atributos existentes e qual é o atributo alvo?**
+<br>Atributo alvo é a coluna Survived
 
 | Atributo | Tipo | Significado |
 | :------------ |:--------------|:---------|
@@ -40,42 +50,44 @@ Lia Casati: liac.ramaldes@gmail.com
 | Fare       | Numérico contínuo| Preço da Passagem |
 | Cabin       | Categorico nominal| Número da cabine do passageiro |
 | Embarked       | Categórico nominal| Porto no qual o passageiro embarcou (C = Cherbourg, Q = Queenstown, S = Southampton) |
+<br>
 
-* Quais são os problemas existentes?
-<br>**Resp**: Incompletude(atributo ausente); Inconsistência(Fare)
-* Qualidade e clareza:
-<br>**Resp**: Não foi necessário renomear campos e colunas pois estava compreensível.
+**Quais são os problemas existentes?**
+<br>Valores ausentes e violação de domínio
+<br><br>
 
 >#### 2.2 Visão geral da base de dados em estudo:<br>
+<br>
 
 ### **Dataset Mania**
 **Seus dados são sobre o que?**
-<br>O dataset Mania possui informações informações relevantes para a detecção do transtorno comum mania.
+<br>A mania é caracterizada por humor eufórico, redução do sono, aumento da energia e interesse em diversos objetivos/projetos ao mesmo tempo, assim como aumento da libido e inquietação. Durante os episódios de mania, o pensamento torna-se muito rápido, podendo prejudicar a formação de ideias e a comunicação, o que faz com que a pessoa transmita ideias delirantes, que muitas vezes fogem da realidade.
+
+O dataset Mania possui informações informações relevantes para a detecção do transtorno comum mania.
 
 **O que você deseja com este conjunto de dados?**
-<br>O objetivo deste trabalho é fazer uma análise sobre quais variáveis têm maior influência na probabilidade de uma pessoa ter episódios de mania.
+<br>O objetivo deste trabalho é fazer uma análise para verificar se uma pessoa pode ter ou não episódios de mania.
 
 **Quais são os tipos de atributos existentes e qual é o atributo alvo?**
 <br>Em geral, os tipos de atributos são:
 - Dados nominais:
-    >Exemplo: Tem problemas nas costas ou no pescoço? Resp.: 1(sim), 5(não), 8(não sabe) e 9(recusou)
+    - Exemplo: Tem problemas nas costas ou no pescoço? Resp.: 1(sim), 5(não), 8(não sabe) e 9(recusou)
 - Dados discretos:
-    >Exemplo: Qual a sua idade? Resp.: 18
+    - Exemplo: Qual a sua idade? Resp.: 18
 - Dados binários:
-    >Exemplo: Tem medo de insetos/animais? Resp.: 1(sim) ou 5(não)
+    - Exemplo: Tem medo de insetos/animais? Resp.: 1(sim) ou 5(não)
 
 Atributo alvo: **dsm_man**
 
 **Quais são os problemas existentes?**
 - Grande quantidade de valores ausentes;
 - Registros sem significados ou informação relevante;
-    >Exemplo: CC50C - Você está atualmente coberto por algum dos seguintes...
+    - Exemplo: CC50C - Você está atualmente coberto por algum dos seguintes...
 - Inconsistencia: existem colunas que se complementam, mas são interpretadas de forma diferente;
-    >Exemplo: M6B1 (duração do episódio sendo muito irritável que se destaca) e M6B2 (Unidade de tempo), assim poderíamos ter: 2 dias, 2 meses, 2 anos, etc.
+    - Exemplo: M6B1 (duração do episódio sendo muito irritável que se destaca) e M6B2 (Unidade de tempo), assim poderíamos ter: 2 dias, 2 meses, 2 anos, etc.
 - Atributo alvo possui muitos valores de uma classe e poucos de outra;
-
-**Qualidade e clareza: garantir que a semântica dos atributos seja clara (nomes coerentes com os dados, se necessário renomear atributos).**
 <br><br>
+
 ### 3.Pré-processamento dos Datasets <br>
 
 Realize o Pré-processamento e Tratamento de Dados em sua base/dataset.
