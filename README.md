@@ -369,7 +369,7 @@ Não aceita valores categoricos e precisa de um algoritmo que tenha erros, uma v
 
 <br>
 
-###**CatboostClassifier**
+### **CatboostClassifier**
 
 É uma técnica de Machine Learning focado em melhoria na velocidade computacional baseado no Gradient Boost. Utilizado para classificação, seu funcionamento se assemelha a técnica em que se baseia, porém o que a diferencia é a maneira em que trata os dados categóricos onde implementa árvores simétricas utilizando One-hot-encoding. Para bases muito grandes, esta técnica permite o uso da GPU. O CatboostClassifier é de fácil configuração para treino e tende a oferecer ótimos resultados mesmo com hiperparâmetros padrões.
 
