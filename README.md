@@ -419,23 +419,30 @@ Funcionamento:
 <br>
 
 
-![acuraria](https://github.com/helenfranca/lap1/blob/helen/img_results/acuracia.PNG?raw=true)
+![matrizdeconfusao](https://github.com/helenfranca/lap1/blob/helen/img_results/matriz_de_confusao.PNG?raw=true)
+
+    
+#### 5.2 Qual dos algoritmos estudados (não visão do grupo, com base nos resultados obtidos) é o mais recomendado para a base de dados clássica utilizada (explicar):<br>
+Com base nos resultados, o algoritmo com melhor desempenho foi o XGBoost.
+
+![besttitanic](https://github.com/helenfranca/lap1/blob/helen/img_results/best_titanic.PNG?raw=true)
+
 
 <br>
+
+#### 5.3 Qual dos algoritmos estudados (não visão do grupo) provavelmente será o mais recomendado para a base de dados em estudo (explicar):<br>
+
+O Catboost tem melhor desempenho com dados categóricos, como o dataset Mania possui apenas valores numéricos, não seria recomendado utilizá-lo.
+Observando as opções restantes, o XGBoost teve um desempenho melhor que o Gradiente Boosting nos testes realizados. Assim, o XGBoost é o mais recomendado para utilização no dataset Mania.
+
+
+![bestmania](https://github.com/helenfranca/lap1/blob/helen/img_results/best_mania.PNG?raw=true)
 
 ![comparacao](https://github.com/helenfranca/lap1/blob/helen/img_results/comparacao_algoritmos.PNG?raw=true)
 
 <br>
 
-![matrizdeconfusao](https://github.com/helenfranca/lap1/blob/helen/img_results/matriz_de_confusao.PNG?raw=true)
-
-    
->#### 5.2 Qual dos algoritmos estudados (não visão do grupo, com base nos resultados obtidos) é o mais recomendado para a base de dados clássica utilizada (explicar):<br>
->...
->#### 5.3 Qual dos algoritmos estudados (não visão do grupo) provavelmente será o mais recomendado para a base de dados em estudo (explicar):<br>
->...
-
-
+![acuraria](https://github.com/helenfranca/lap1/blob/helen/img_results/acuracia.PNG?raw=true)
 ># Marco de Entrega 02: Itens do Sprint 02 <br>
 >
 
