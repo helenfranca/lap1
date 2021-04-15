@@ -88,7 +88,7 @@ Atributo alvo: **dsm_man**
 - Atributo alvo possui muitos valores de uma classe e poucos de outra;
 <br><br>
 
-### 3.Pré-processamento dos Datasets <br>
+## 3.Pré-processamento dos Datasets <br>
 
 Realize o Pré-processamento e Tratamento de Dados em sua base/dataset.
 
@@ -295,7 +295,7 @@ Assim, poderíamos ter: 2 dias, 2 meses, 2 anos, etc.
 Vamos tratar esses valores transformando todos os registro para uma única unidade de tempo. Escolhemos a unidade de tempo "hora" para a padronização.
 
 
-### 4.Análise Exploratória dos datasets<br>
+## 4.Análise Exploratória dos datasets<br>
 
 >#### 4.1 Análise exploratória na base de dados clássica:<br>
 
@@ -363,16 +363,10 @@ Visualizando correlações em CC:
 
 ![dataset_mania_CC_correlations](./imagens/dataset_mania_CC_correlations.png)
 
-Por fim, analisando os dados coletados até aqui, uma possível análise para realizar posteriormente seria tratar cada atrituto individualmente, reduzindo a dimensionalidade e possibilitando uma melhor compreensão do dataset.
-
->Sugestão: Utilizar ferramentas como Pandas Proffile e Sweetviz , Seaborn e Matplotlib <br>
     
-[Tutorial básico com Seaborn](https://github.com/profmoisesomena/escience_and_tools/blob/master/seaborn/Seaborn_introduction.ipynb "Seaborn Introduction")
+## 5.Estudo dos algoritmos previamente definidos para a pesquisa
 
-># Marco de Entrega 01: Itens do Sprint 01 <br>
-    
-### 5.Estudo dos algoritmos previamente definidos para a pesquisa
-  Os algoritmos definidos para a pesquisa foram: Gradient Boost Classifier, Extreme Gradient Boosting e CatBoost Classifier.
+Os algoritmos definidos para a pesquisa foram: Gradient Boost Classifier, Extreme Gradient Boosting e CatBoost Classifier.
 
 Para compreendermos melhor o funcionamento cada um dos algoritmos, vamos conhecer alguns conceitos:
 
@@ -380,26 +374,16 @@ Para compreendermos melhor o funcionamento cada um dos algoritmos, vamos conhece
 
 Os métodos **Boosting** formam uma categoria de Ensemble Learning, tendo como base treinar vários modelos mais simples com a finalidade de produzir um modelo final mais robusto. Para maximizar o desempenho do preditor final, o Boosting treina iterativamente novos modelos com um enfoque nas observações que os modelos anteriores erraram mais, tornando a predição mais resistente ao viés. Em seguida, atualiza-se o modelo para priorizar as predições com maior erro nas observações da base de teste. O modo como ocorre esse treinamento e essa atualização é onde diferem os diferentes algoritmos de Boosting.
 <br>
+
 #### 5.1 Visão geral sobre cada um dos algoritmos:<br>
-   
-### **Gradient Boost**
 
 **A) Explicação sobre o algoritmo/método de classificação adotado (como funciona, performance/complexidade para treino e para execução, etc...)**
 
+*Gradient Boost*
+
 Gradiente Boost é um algoritimo que tem como finalidade prever valores continuos. Ele é baseado em árvores de decisão e trabalha de forma a melhorar as previsões futuras com base nos erros das anteriores. Funciona calculando residuos, sendo estes o dado previsto menos o dado original, conforme a diferença entre os residuos diminui ele chega mais próximo ao resultado, as previsões são feitas seguindo a seguinte formula "previsão2 = previsão1 + (nota x residual)", sendo a nota um valor entre 0 e 1 responsável por minimizar o overfit. Tem uma complexidade grande devido seus calculos e uma performace que deve ser analisada com cuidado pois esse algoritmo pode gerar overfit.
-    
-**B) Estudar e apresentar exemplo de aplicações com algoritmos:**
-É um algoritimo que pode ser usado tanto para classificação como para regressão.
-   
-**C) Existem requisitos/premissas necessárias para aplicação do algoritmo, quais são?**
 
-Não aceita valores categoricos e precisa de um algoritmo que tenha erros, uma vez que sua predição é baseada nos erros.
-    
-**D) Aplicar os modelos estudados em bases de dados clássicas como Iris/Titanic**
-
-<br>
-
-### **CatboostClassifier**
+*CatboostClassifier*
 
 É uma técnica de Machine Learning focado em melhoria na velocidade computacional baseado no Gradient Boost. Utilizado para classificação, seu funcionamento se assemelha a técnica em que se baseia, porém o que a diferencia é a maneira em que trata os dados categóricos onde implementa árvores simétricas utilizando One-hot-encoding. Para bases muito grandes, esta técnica permite o uso da GPU. O CatboostClassifier é de fácil configuração para treino e tende a oferecer ótimos resultados mesmo com hiperparâmetros padrões.
 
@@ -407,25 +391,9 @@ Esse procedimento é muito propenso ao overfitting, porque é realizando utiliza
 
 Segundo a documentação ele tende a ser até 8x mais rápido que outros algoritmos de mesma finalidade, como o XGboost durante a previsão. Porém se os dados, em sua maioria, forem numéricos tende a ser mais demorado que o LightGBM, outro algoritmo de Machine Learning.
 
-<br>
+*Extreme Gradient Boosting*
 
-**B) Estudar e apresentar exemplo de aplicações com algoritmos:**
-
-Este algoritmo costuma ser aplicado em desafios de negócio, como detecção de fraude; Recomendação; Previsões;
-
-<br>
-
-**C) Existem requisitos/premissas necessárias para aplicação do algoritmo, quais são?**
-
-Este algoritmo não exige muito esforço no pré-processamento dos dados se comparados com outros tipos de algoritmos, já que aceita dados categóricos.
-
-Para que não hajam erros na criação do modelo, é interessante informar as colunas queu são categóricas. 
-
-**D) Aplicar os modelos estudados em bases de dados clássicas como Iris/Titanic**
-
-### **Extreme Gradient Boosting**
-**A) Sobre o algoritmo/método de classificação adotado**
-<br>Extreme Gradient Boosting ou XGBoost, é um algoritmo de aprendizado de máquina, baseado na estrutura do Gradient Boosting. Como podemos perceber pelo nome, o XGBoost é um Gradient Boosting melhorado, combina técnicas de otimização de software e hardware para produzir resultados superiores usando menos recursos de computação no menor período de tempo.
+Extreme Gradient Boosting ou XGBoost, é um algoritmo de aprendizado de máquina, baseado na estrutura do Gradient Boosting. Como podemos perceber pelo nome, o XGBoost é um Gradient Boosting melhorado, combina técnicas de otimização de software e hardware para produzir resultados superiores usando menos recursos de computação no menor período de tempo.
 
 Funcionamento:
 1. O algoritmo faz uma predição inicial;
@@ -439,38 +407,45 @@ Funcionamento:
 4. Calculamos o output para cada folha
 5. Temos uma árvore completa. Assim, o XGBoost faz novas predições com a predição inicial mais o output da árvore vezes uma learning rate (taxa de aprendizado).
 
-**B) Estudar e apresentar exemplo de aplicações com algoritmos**
-<br>
+    
+**B) Estudar e apresentar exemplo de aplicações com algoritmos:**
 
+Os algoritimos podem ser utilizados tanto para classificação como para regressão.
+   
 **C) Existem requisitos/premissas necessárias para aplicação do algoritmo, quais são?**
-<br> O algoritmo não trabalha com dados categóricos
 
-**D) Aplicar os modelos estudados em bases de dados clássicas como Iris/Titanic**
-<br>
+Os algoritmos Gradient Boosting e Extreme Gradient Boosting não trabalham valores categoricos. Já o Catboost trabalha com dados categóricos e, para que não hajam erros na criação do modelo, é interessante informar as colunas que são categóricas.
+    
+**D) Aplicar os modelos estudados em bases de dados clássicas como Titanic**
 
+[Notebook do titanic]() com a aplicação dos modelos estudados.
+    
+#### 5.2 Qual dos algoritmos estudados (não visão do grupo, com base nos resultados obtidos) é o mais recomendado para a base de dados clássica utilizada (explicar):<br>
+
+Nossa primeira comparação é entre as acurácias. Podemos destacar o xgboost, que mesmo que o resultado de treino e teste estejam um pouco distante, o algoritmo ainda teve o melhor desempenho comparado com os demais.
+
+![acuraria](https://github.com/helenfranca/lap1/blob/helen/img_results/acuracia.PNG?raw=true)
+
+Visualizando outras métricas, ainda que o Gradient Boosting tenha bons resultados, o XGBoost foi novamente o melhor. Um dos motivos do baixo desempenho do Catboost pode ser devido ao tratamento que aplicamos no dataset titanic, retirando todas variáveis categoricas.
+
+![comparacao](https://github.com/helenfranca/lap1/blob/helen/img_results/comparacao_algoritmos.PNG?raw=true)
+
+Comparamos também as matrizes de confusão geradas, onde podemos ver o Catboost errando mais que os outros.
 
 ![matrizdeconfusao](https://github.com/helenfranca/lap1/blob/helen/img_results/matriz_de_confusao.PNG?raw=true)
 
-    
-#### 5.2 Qual dos algoritmos estudados (não visão do grupo, com base nos resultados obtidos) é o mais recomendado para a base de dados clássica utilizada (explicar):<br>
 Com base nos resultados, o algoritmo com melhor desempenho foi o XGBoost.
 
 ![besttitanic](https://github.com/helenfranca/lap1/blob/helen/img_results/best_titanic.PNG?raw=true)
-
 
 <br>
 
 #### 5.3 Qual dos algoritmos estudados (não visão do grupo) provavelmente será o mais recomendado para a base de dados em estudo (explicar):<br>
 
-O Catboost tem melhor desempenho com dados categóricos, como o dataset Mania possui apenas valores numéricos, não seria recomendado utilizá-lo.
+O Catboost tem melhor desempenho com dados categóricos e como o dataset Mania possui apenas valores numéricos, não seria recomendado utilizá-lo.
 Observando as opções restantes, o XGBoost teve um desempenho melhor que o Gradiente Boosting nos testes realizados. Assim, o XGBoost é o mais recomendado para utilização no dataset Mania.
 
-
 ![bestmania](https://github.com/helenfranca/lap1/blob/helen/img_results/best_mania.PNG?raw=true)
-
-
-># Marco de Entrega 02: Itens do Sprint 02 <br>
->
 
 ### 6.Implementar método no dataset em estudo  (explicação + datasets)<br>
     A) Explicação sobre o processo de aplicação dos algoritmos em estudo 
@@ -478,17 +453,17 @@ Observando as opções restantes, o XGBoost teve um desempenho melhor que o Grad
     B) Implementar método nos datasets utilizados comparar resultados obtidos 
     e validar ou descartar hipótese do ítem 5.1 e 5.2.
 
-![comparacao](https://github.com/helenfranca/lap1/blob/helen/img_results/comparacao_algoritmos.PNG?raw=true)
+Baseado nos [notebook dos testes do AutoML](), o Gradient Boosting teve um melhor desemepenho. Assim, o grupo decidiu aplicá-lo devido aos hiperparâmetros estarem definidos.
 
-<br>
+Para termos resultados mais confiáveis, utilizamos algumas técnicas antes de realizarmos de fato o treinamento do dataset. Para isso aplicamos um processo de seleção de características para tentar determinar se os recursos de entrada são relevantes para o resultado a ser previsto.
 
-![acuraria](https://github.com/helenfranca/lap1/blob/helen/img_results/acuracia.PNG?raw=true)
-    
->#### 6.1 Detalhamento dos processos de classificação com base nos algoritmos na base de dados em estudo:<br>
->...
->
+Depois de selecionar os melhores atributos, tentamos ajustar os dados em relação ao desbalanceamento. A abordagem utilizada foi a SMOTE, onde novos exemplos são criados a partir dos exemplos existentes.
 
-### 7.Análise dos resultados obtidos <br>
+Com os dados tratados e balanceados, podemos iniciar o processo de treinamento. Para isso, nós criamos o modelo com os parâmetros fornecidos no AutoML; fizemos o treinamento propriamente dito e, por fim, realizamos as predições.
+
+O processo de aplicação pode ser visto no [notebook do mania]().
+
+## 7.Análise dos resultados obtidos <br>
     A) Detalhar conclusões com base nos resultados obtidos
     B) Definir quais trabalhos futuros podem ser realizados a partir das conclusões obtidas e tarefas realizadas.
     
